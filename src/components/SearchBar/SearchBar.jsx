@@ -7,6 +7,7 @@ const SearchBar = ({ onSearch }) => {
         autoFocus
         placeholder="Search movie"
         name="searchMovie"
+        required
       ></input>
       <button type="submit">Search</button>
     </form>
