@@ -52,3 +52,14 @@ export const getMovieCast = async (movieId) => {
   });
   return response.data;
 };
+
+//movie reviews
+
+export const getMovieReviews = async (movieId) => {
+  const response = await axios.get(`movie/${movieId}/reviews`, {
+    headers: {
+      Authorization: `Bearer ${TOKEN_KEY}`,
+    },
+  });
+  return response.data;
+};

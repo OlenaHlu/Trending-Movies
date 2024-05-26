@@ -7,6 +7,7 @@ import toast from "react-hot-toast";
 import { useState, useEffect } from "react";
 import { useLocation, useSearchParams } from "react-router-dom";
 
+const notify = (message) => toast.error(`${message}`);
 const MoviesPage = () => {
   const location = useLocation();
   const [loading, setLoading] = useState(false);
@@ -15,8 +16,6 @@ const MoviesPage = () => {
 
   const [searchParams, setSearchParams] = useSearchParams();
   const movieName = searchParams.get("searchMovie") ?? "";
-
-  const notify = (message) => toast.error(`${message}`);
 
   useEffect(() => {
     if (movieName.trim() === "") {
