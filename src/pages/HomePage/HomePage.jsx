@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import getTrendingMovies from "../../components/Api/apiData";
+import { getTrendingMovies } from "../../components/Api/apiData";
 import Loader from "../../components/Loader/Loader";
 import toast from "react-hot-toast";
 
@@ -32,6 +32,7 @@ const HomePage = () => {
   return (
     <div>
       <h1>Trending today</h1>
+      {loading && <Loader />}
       <ul>
         {trendMovies.map((movie) => (
           <li key={movie.id}>
@@ -40,7 +41,6 @@ const HomePage = () => {
             </Link>
           </li>
         ))}
-        {loading && <Loader />}
       </ul>
     </div>
   );
