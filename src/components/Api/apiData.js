@@ -30,3 +30,14 @@ export const getMovie = async (searchQuery) => {
   );
   return response.data;
 };
+
+//movie details
+
+export const getMovieDetails = async (movieId) => {
+  const response = await axios.get(`movie/${movieId}`, {
+    headers: {
+      Authorization: `Bearer ${TOKEN_KEY}`,
+    },
+  });
+  return response.data;
+};
