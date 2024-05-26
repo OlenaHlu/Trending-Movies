@@ -41,3 +41,14 @@ export const getMovieDetails = async (movieId) => {
   });
   return response.data;
 };
+
+//movie cast
+
+export const getMovieCast = async (movieId) => {
+  const response = await axios.get(`movie/${movieId}/credits`, {
+    headers: {
+      Authorization: `Bearer ${TOKEN_KEY}`,
+    },
+  });
+  return response.data;
+};
