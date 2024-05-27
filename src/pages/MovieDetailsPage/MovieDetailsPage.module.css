@@ -49,3 +49,12 @@
 .addInfoItem:focus > .addInfoLink {
   color: white;
 }
+
+.goBack {
+  color: rgb(12, 88, 99);
+}
+
+.goBack:hover,
+.goBack:focus {
+  color: rgb(22, 166, 128);
+}

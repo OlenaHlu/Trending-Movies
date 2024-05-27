@@ -1,0 +1,18 @@
+.reviewContainer {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px;
+}
+
+.reviewItem {
+  margin-bottom: 16px;
+}
+
+.reviewAuthor {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.reviewContent {
+  font-size: 14px;
+}

@@ -3,6 +3,7 @@ import { getMovieReviews } from "../Api/apiData";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
+import css from "./MovieReviews.module.css";
 
 const MovieReviews = () => {
   const [reviewData, setReviewData] = useState([]);
@@ -27,14 +28,14 @@ const MovieReviews = () => {
   }, [movieId]);
 
   return (
-    <div>
+    <div className={css.reviewContainer}>
       {loading && <Loader />}
       <ul>
         {reviewData.length > 0 ? (
           reviewData.map(({ id, author, content }) => (
-            <li key={id}>
-              <p>{author}</p>
-              <p>{content}</p>
+            <li className={css.reviewItem} key={id}>
+              <p className={css.reviewAuthor}>{author}</p>
+              <p className={css.reviewContent}>{content}</p>
             </li>
           ))
         ) : (

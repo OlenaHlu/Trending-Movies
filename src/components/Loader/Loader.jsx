@@ -1,8 +1,9 @@
 import { ThreeCircles } from "react-loader-spinner";
+import css from "./Loader.module.css";
 
 const Loader = ({ loading }) => {
   return (
-    <div>
+    <div className={css.loader}>
       <ThreeCircles
         // visible={true}
         loading={loading}

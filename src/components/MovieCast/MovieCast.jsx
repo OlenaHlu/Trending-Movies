@@ -3,6 +3,7 @@ import { getMovieCast } from "../Api/apiData";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
+import css from "./MovieCast.module.css";
 
 const MovieCast = () => {
   const [castData, setCastData] = useState([]);
@@ -30,10 +31,10 @@ const MovieCast = () => {
   return (
     <div>
       {loading && <Loader />}
-      <ul>
+      <ul className={css.castList}>
         {castData.length > 0
           ? castData.map(({ id, name, profile_path, character }) => (
-              <li key={id}>
+              <li key={id} className={css.castItem}>
                 <img
                   src={
                     profile_path
@@ -41,9 +42,10 @@ const MovieCast = () => {
                       : "https://via.placeholder.com/150"
                   }
                   alt={name}
+                  width="120"
                 />
-                <h3>{name}</h3>
-                <p>Character: {character}</p>
+                <h3 className={css.name}>{name}</h3>
+                <p className={css.character}>Character: {character}</p>
               </li>
             ))
           : !loading && <p>Sorry, there is not any info...</p>}

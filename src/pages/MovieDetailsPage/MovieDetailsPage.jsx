@@ -44,7 +44,9 @@ const MovieDetailsPage = () => {
   return (
     <div className={css.detailsContainer}>
       <div>
-        <Link to={backLink.current}>Go back</Link>
+        <Link to={backLink.current} className={css.goBack}>
+          Go back
+        </Link>
       </div>
       <div className={css.movieInfo}>
         <img
