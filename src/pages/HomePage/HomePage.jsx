@@ -13,7 +13,18 @@ const HomePage = () => {
 
   const location = useLocation();
 
-  const notify = () => toast.error("Sorry, something went wrong!");
+  const notify = () =>
+    toast.error("Sorry, something went wrong!", {
+      style: {
+        border: "1px solid #000000",
+        padding: "16px",
+        color: "#000000",
+      },
+      iconTheme: {
+        primary: "#000000",
+        secondary: "#f5f5f5",
+      },
+    });
 
   useEffect(() => {
     const fetchTrendingMovies = async () => {

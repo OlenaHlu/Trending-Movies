@@ -6,7 +6,7 @@ import { getMovie } from "../../components/Api/apiData";
 import toast from "react-hot-toast";
 import { useState, useEffect } from "react";
 import { useLocation, useSearchParams } from "react-router-dom";
-
+import css from "./MoviesPage.module.css";
 const notify = (message) => toast.error(`${message}`);
 const MoviesPage = () => {
   const location = useLocation();
@@ -61,7 +61,9 @@ const MoviesPage = () => {
       <SearchBar onSubmit={handleSearch} />
       {loading && <Loader />}
       {error && (
-        <p>No results available. Please refine your search and try again.</p>
+        <p className={css.information}>
+          No results available. Please refine your search and try again.
+        </p>
       )}
       <MovieList movies={moviesList} location={location} />
     </div>
