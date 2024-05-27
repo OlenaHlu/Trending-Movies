@@ -1,0 +1,14 @@
+.homePageContainer {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.homePageContainer {
+  padding-left: 24px;
+  color: black;
+  margin-bottom: 24px;
+}
+
+.homePageList {
+  list-style: outside;
+}

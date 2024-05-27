@@ -5,6 +5,8 @@ import toast from "react-hot-toast";
 
 import { Link, useLocation } from "react-router-dom";
 
+import css from "./HomePage.module.css";
+
 const HomePage = () => {
   const [trendMovies, setTrendMovies] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -30,13 +32,17 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Trending today</h1>
+    <div className={css.homePageContainer}>
+      <h1 className={css.homePageTitle}>Trending today</h1>
       {loading && <Loader />}
-      <ul>
+      <ul className={css.homePageList}>
         {trendMovies.map((movie) => (
           <li key={movie.id}>
-            <Link to={`/movies/${movie.id}`} state={{ from: location }}>
+            <Link
+              to={`/movies/${movie.id}`}
+              state={{ from: location }}
+              className={css.homePageLink}
+            >
               {movie.title}
             </Link>
           </li>
