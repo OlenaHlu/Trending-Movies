@@ -1,0 +1,15 @@
+.movieList {
+  list-style: outside;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px;
+}
+
+.movieItem {
+  color: rgb(12, 88, 99);
+}
+
+.movieItem:hover,
+.movieItem:focus {
+  color: rgb(22, 166, 128);
+}

@@ -1,6 +1,8 @@
+import css from "./SearchBar.module.css";
+
 const SearchBar = ({ onSearch }) => {
   return (
-    <form onSubmit={onSearch}>
+    <form onSubmit={onSearch} className={css.form}>
       <input
         type="text"
         autoComplete="off"
@@ -9,8 +11,11 @@ const SearchBar = ({ onSearch }) => {
         name="searchMovie"
         pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
         required
+        className={css.input}
       ></input>
-      <button type="submit">Search</button>
+      <button className={css.searchBtn} type="submit">
+        Search
+      </button>
     </form>
   );
 };

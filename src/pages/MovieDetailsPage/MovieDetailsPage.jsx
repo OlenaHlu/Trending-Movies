@@ -3,12 +3,12 @@ import Loader from "../../components/Loader/Loader";
 import { useState, useEffect, useRef, Suspense } from "react";
 import { useParams, useLocation, Link, Outlet } from "react-router-dom";
 import toast from "react-hot-toast";
+import css from "./MovieDetailsPage.module.css";
 
 const MovieDetailsPage = () => {
   const [movieDetails, setMovieDetails] = useState({});
   const location = useLocation();
   const { movieId } = useParams();
-  const [loading, setLoading] = useState(false);
   const backLink = useRef(location.state?.from || "/");
 
   const notify = () => toast.error("Something went wrong. Please, try again!");
@@ -18,14 +18,11 @@ const MovieDetailsPage = () => {
       return;
     }
     const fetchMovieDetails = async () => {
-      setLoading(true);
       try {
         const data = await getMovieDetails(movieId);
         setMovieDetails(data);
       } catch (error) {
         notify();
-      } finally {
-        setLoading(false);
       }
     };
     fetchMovieDetails();
@@ -45,47 +42,57 @@ const MovieDetailsPage = () => {
     : "https://via.placeholder.com/500x750?text=No+Image";
 
   return (
-    <div>
+    <div className={css.detailsContainer}>
       <div>
         <Link to={backLink.current}>Go back</Link>
       </div>
-      {loading ? (
-        <Loader />
-      ) : (
+      <div className={css.movieInfo}>
+        <img
+          width="300"
+          height="450"
+          className={css.img}
+          src={posterUrl}
+          alt={original_title || "Movie Poster"}
+        />
         <div>
-          <div>
-            <img src={posterUrl} alt={original_title || "Movie Poster"} />
-          </div>
           <h1>{original_title}</h1>
           <p>Average score: {scoreToFixed}</p>
           <h2>Overview</h2>
           <p>{overview}</p>
           <h2>Genres</h2>
-          <ul>
+          <ul className={css.genreList}>
             {genres.map(({ id, name }) => (
               <li key={id}>{name}</li>
             ))}
           </ul>
-          <div>
-            <h3>Additional information</h3>
-            <ul>
-              <li>
-                <Link to="cast" state={{ from: location }}>
-                  Cast
-                </Link>
-              </li>
-              <li>
-                <Link to="reviews" state={{ from: location }}>
-                  Reviews
-                </Link>
-              </li>
-            </ul>
-          </div>
-          <Suspense fallback={<Loader />}>
-            <Outlet />
-          </Suspense>
         </div>
-      )}
+      </div>
+      <div className={css.addInfo}>
+        <h3>Additional information</h3>
+        <ul className={css.addInfoList}>
+          <li className={css.addInfoItem}>
+            <Link
+              to="cast"
+              state={{ from: location }}
+              className={css.addInfoLink}
+            >
+              Cast
+            </Link>
+          </li>
+          <li className={css.addInfoItem}>
+            <Link
+              to="reviews"
+              state={{ from: location }}
+              className={css.addInfoLink}
+            >
+              Reviews
+            </Link>
+          </li>
+        </ul>
+      </div>
+      <Suspense fallback={<Loader />}>
+        <Outlet />
+      </Suspense>
     </div>
   );
 };

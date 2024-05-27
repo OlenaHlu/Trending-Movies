@@ -1,14 +1,33 @@
 .homePageContainer {
   margin-right: auto;
   margin-left: auto;
+  max-width: 1200px;
 }
 
 .homePageContainer {
   padding-left: 24px;
   color: black;
   margin-bottom: 24px;
+  margin-right: auto;
+  margin-left: auto;
+  min-width: 1200px;
 }
 
 .homePageList {
   list-style: outside;
+}
+
+.homePageTitle {
+  font-size: 36px;
+  color: rgb(12, 88, 99);
+  padding-right: auto;
+  padding-left: 24px;
+}
+
+.homePageLink {
+  color: black;
+}
+.homePageLink:hover,
+.homePageLink:focus {
+  color: rgb(22, 166, 128);
 }

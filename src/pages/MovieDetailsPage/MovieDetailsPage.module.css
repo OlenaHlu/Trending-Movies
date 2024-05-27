@@ -1,0 +1,51 @@
+.detailsContainer {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px;
+}
+.movieInfo {
+  display: flex;
+  padding: 24px;
+  border-bottom: 1px solid rgb(12, 88, 99);
+}
+.img {
+  margin-right: 38px;
+}
+
+.genreList {
+  list-style: inside;
+}
+
+.addInfo {
+  padding: 24px;
+}
+
+.addInfoList {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.addInfoItem {
+  font-size: 16px;
+  padding: 4px 16px;
+  background-color: rgb(22, 166, 128);
+  outline: none;
+  border: 1px solid black;
+  border-radius: 8px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.addInfoLink {
+  color: black;
+}
+.addInfoItem:hover,
+.addInfoItem:focus {
+  border-color: rgb(12, 88, 99);
+}
+
+.addInfoItem:hover > .addInfoLink,
+.addInfoItem:focus > .addInfoLink {
+  color: white;
+}
