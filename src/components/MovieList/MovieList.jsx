@@ -12,7 +12,14 @@ const MovieList = ({ movies }) => {
             state={{ from: location }}
             className={css.movieItem}
           >
-            {movie.title}
+            <img
+              className={css.filmPoster}
+              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+              alt={movie.title}
+            />
+            <div className={css.titleContainer}>
+              <p className={css.title}>{movie.title}</p>
+            </div>
           </Link>
         </li>
       ))}
