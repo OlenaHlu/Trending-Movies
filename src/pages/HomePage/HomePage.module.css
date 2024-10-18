@@ -1,28 +1,13 @@
-.homePageContainer {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1200px;
-}
-
-.homePageContainer {
-  padding-left: 24px;
-  color: black;
-  margin-bottom: 24px;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: 120px;
-  min-width: 1200px;
-}
-
 .homePageList {
   list-style: outside;
 }
 
 .homePageTitle {
   font-size: 36px;
-  color: rgb(12, 88, 99);
-  padding-right: auto;
-  padding-left: 24px;
+  color: rgb(27, 153, 173);
+  margin-top: 24px;
+  margin-bottom: 24px;
+  padding-left: 56px;
 }
 
 .homePageLink {

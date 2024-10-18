@@ -4,9 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
-  background-color: rgb(223, 243, 236);
-  box-shadow: -4px -4px 12px 14px rgba(21, 45, 45, 0.36);
+  background-color: rgba(22, 26, 26, 0.36);
+  box-shadow: -4px -4px 24px 14px rgba(174, 228, 228, 0.36);
   top: 0;
 }
 .nav {
@@ -17,11 +16,12 @@
 }
 
 .home {
-  color: rgb(22, 166, 128);
+  color: rgb(27, 153, 173);
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
   transition: color 0.5s;
+  transition: font-size 0.5s;
 }
 
 .home:hover {
@@ -33,6 +33,6 @@
 .active {
   color: rgb(12, 88, 99);
   text-decoration: underline;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
 }
