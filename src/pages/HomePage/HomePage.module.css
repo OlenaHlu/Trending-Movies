@@ -4,10 +4,11 @@
 
 .homePageTitle {
   font-size: 36px;
-  color: rgb(27, 153, 173);
+  color: rgb(12, 88, 99);
   margin-top: 24px;
   margin-bottom: 24px;
   padding-left: 56px;
+  text-shadow: 1px 1px 2px rgb(121, 188, 192), 2px 2px 5px rgb(195, 224, 220);
 }
 
 .homePageLink {

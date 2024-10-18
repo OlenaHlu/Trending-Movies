@@ -22,7 +22,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgb(55, 58, 58);
-  /* background: url("./assets/img/bg1.webp"); */
+  background: url("./assets/img/bg-img.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
