@@ -34,6 +34,7 @@
   border: 1px solid rgb(12, 88, 99);
   border-radius: 16px;
   color: rgb(12, 88, 99);
+  border: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input:hover,
@@ -51,6 +52,7 @@
   border: none;
   border-radius: 16px;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .searchBtn:hover,
 .searchBtn:focus {

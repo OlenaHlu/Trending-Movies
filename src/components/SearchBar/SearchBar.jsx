@@ -10,7 +10,6 @@ const SearchBar = ({ onSearch }) => {
           type="text"
           autoComplete="off"
           autoFocus
-          // placeholder="Search movie"
           name="searchMovie"
           pattern="^[a-zA-Zа-яА-Я]+(([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           required

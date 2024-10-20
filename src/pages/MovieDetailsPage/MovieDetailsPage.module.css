@@ -1,16 +1,45 @@
 .detailsContainer {
   margin-right: auto;
   margin-left: auto;
-  max-width: 1200px;
 }
+
+.link {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 25px;
+  color: rgb(12, 88, 99);
+  text-shadow: 1px 1px 2px rgb(121, 188, 192), 2px 2px 5px rgb(195, 224, 220);
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  color: rgb(12, 88, 99);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon:hover,
+.icon:focus {
+  color: rgb(22, 166, 128);
+}
+
 .movieInfo {
   display: flex;
+  flex-direction: row;
+  gap: 38px;
   padding: 24px;
-  border-bottom: 1px solid rgb(12, 88, 99);
+  border-radius: 16px;
+  background-color: hsla(182, 57%, 82%, 0.7);
+  color: rgb(64, 70, 70);
 }
-.img {
+
+/* .img {
   margin-right: 38px;
-}
+} */
 
 .genreList {
   list-style: inside;
@@ -18,6 +47,12 @@
 
 .addInfo {
   padding: 24px;
+  margin-top: 24px;
+  border-top: 2px solid rgb(12, 88, 99);
+}
+.addTitle {
+  color: rgb(12, 88, 99);
+  text-shadow: 1px 1px 2px rgb(121, 188, 192), 2px 2px 5px rgb(195, 224, 220);
 }
 
 .addInfoList {
@@ -27,34 +62,31 @@
 }
 
 .addInfoItem {
+  width: 120px;
   font-size: 16px;
-  padding: 4px 16px;
-  background-color: rgb(22, 166, 128);
+  padding: 10px 16px;
+  background-color: rgb(64, 70, 70);
   outline: none;
-  border: 1px solid black;
-  border-radius: 8px;
+  border: none;
+  border-radius: 16px;
   cursor: pointer;
   list-style: none;
+  text-align: center;
+  transition: transform 0.3s ease;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .addInfoLink {
-  color: black;
+  color: rgb(105, 160, 168);
 }
 .addInfoItem:hover,
 .addInfoItem:focus {
-  border-color: rgb(12, 88, 99);
+  background-color: rgb(12, 88, 99);
+  transform: scale(1.1);
 }
 
 .addInfoItem:hover > .addInfoLink,
 .addInfoItem:focus > .addInfoLink {
-  color: white;
-}
-
-.goBack {
-  color: rgb(12, 88, 99);
-}
-
-.goBack:hover,
-.goBack:focus {
-  color: rgb(22, 166, 128);
+  color: rgb(105, 160, 168);
 }

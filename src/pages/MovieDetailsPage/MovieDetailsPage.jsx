@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, Suspense } from "react";
 import { useParams, useLocation, Link, Outlet } from "react-router-dom";
 import toast from "react-hot-toast";
 import css from "./MovieDetailsPage.module.css";
+import { GiReturnArrow } from "react-icons/gi";
 
 const MovieDetailsPage = () => {
   const [movieDetails, setMovieDetails] = useState({});
@@ -43,10 +44,11 @@ const MovieDetailsPage = () => {
 
   return (
     <div className={css.detailsContainer}>
-      <div>
-        <Link to={backLink.current} className={css.goBack}>
-          Go back
+      <div className={css.link}>
+        <Link to={backLink.current}>
+          <GiReturnArrow className={css.icon} />
         </Link>
+        Go back
       </div>
       <div className={css.movieInfo}>
         <img
@@ -70,7 +72,7 @@ const MovieDetailsPage = () => {
         </div>
       </div>
       <div className={css.addInfo}>
-        <h3>Additional information</h3>
+        <h3 className={css.addTitle}>Additional information</h3>
         <ul className={css.addInfoList}>
           <li className={css.addInfoItem}>
             <Link

@@ -14,7 +14,11 @@ const MovieList = ({ movies }) => {
           >
             <img
               className={css.filmPoster}
-              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+              src={
+                movie.poster_path
+                  ? `https://image.tmdb.org/t/p/w300${movie.poster_path}`
+                  : `https://via.placeholder.com/500x750?text=No+Image`
+              }
               alt={movie.title}
             />
             <div className={css.titleContainer}>
