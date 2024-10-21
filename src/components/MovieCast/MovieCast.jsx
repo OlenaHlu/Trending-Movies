@@ -39,16 +39,22 @@ const MovieCast = () => {
                   src={
                     profile_path
                       ? `https://image.tmdb.org/t/p/w500${profile_path}`
-                      : "https://via.placeholder.com/150"
+                      : "https://via.placeholder.com/500x750?text=No+Image"
                   }
                   alt={name}
-                  width="120"
+                  width="150"
+                  height="210"
+                  className={css.image}
                 />
                 <h3 className={css.name}>{name}</h3>
                 <p className={css.character}>Character: {character}</p>
               </li>
             ))
-          : !loading && <p>Sorry, there is not any info...</p>}
+          : !loading && (
+              <p className={css.sorry}>
+                Sorry, there is not any info about Cast...
+              </p>
+            )}
       </ul>
     </div>
   );

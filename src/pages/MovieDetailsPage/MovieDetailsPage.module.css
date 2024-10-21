@@ -37,10 +37,6 @@
   color: rgb(64, 70, 70);
 }
 
-/* .img {
-  margin-right: 38px;
-} */
-
 .genreList {
   list-style: inside;
 }
@@ -89,4 +85,8 @@
 .addInfoItem:hover > .addInfoLink,
 .addInfoItem:focus > .addInfoLink {
   color: rgb(105, 160, 168);
+}
+
+.img {
+  border-radius: 16px;
 }
