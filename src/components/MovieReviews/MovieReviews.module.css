@@ -1,18 +1,42 @@
-.reviewContainer {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1200px;
+/* .reviewContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+} */
+
+.reviewlist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }
 
 .reviewItem {
-  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: hsla(180, 26%, 87%, 0.7);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: rgb(12, 88, 99);
 }
 
 .reviewAuthor {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgb(121, 188, 192), 2px 2px 5px rgb(195, 224, 220);
 }
+
 .reviewContent {
   font-size: 14px;
+}
+
+.icon {
+  margin-left: 8px;
 }
