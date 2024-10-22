@@ -1,6 +1,7 @@
 .information {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1200px;
-  color: rgb(22, 166, 128);
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  color: rgb(161, 35, 35);
+  font-weight: 900;
 }

@@ -1,12 +1,8 @@
 .form {
-  margin-bottom: 24px;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1200px;
-  margin-top: 46px;
   display: flex;
-  /* align-items: center;
-  justify-content: center; */
+  justify-content: center;
+  margin-top: 46px;
+  margin-bottom: 46px;
 }
 
 .iconPosition {
