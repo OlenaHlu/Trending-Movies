@@ -1,9 +1,6 @@
-/* .reviewContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-} */
+.reviewContainer {
+  margin-bottom: 16px;
+}
 
 .reviewlist {
   list-style: none;
@@ -39,4 +36,12 @@
 
 .icon {
   margin-left: 8px;
+}
+
+.sorry {
+  color: rgb(12, 88, 99);
+  background-color: hsla(2, 56%, 74%, 0.7);
+  padding: 10px;
+  border-radius: 12px;
+  margin-bottom: 16px;
 }

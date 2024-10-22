@@ -5,11 +5,10 @@ const Loader = ({ loading }) => {
   return (
     <div className={css.loader}>
       <ThreeCircles
-        // visible={true}
         loading={loading}
-        height="100"
-        width="100"
-        color="#4fa94d"
+        height="80"
+        width="80"
+        color="rgb(12, 88, 99)"
         ariaLabel="three-circles-loading"
         wrapperStyle={{}}
         wrapperClass=""

@@ -43,7 +43,9 @@ const MovieReviews = () => {
             </li>
           ))
         ) : (
-          <p>We do not have any reviews for this movie yet</p>
+          <p className={css.sorry}>
+            We do not have any reviews for this movie yet...
+          </p>
         )}
       </ul>
     </div>
