@@ -1,7 +1,3 @@
-/* .homePageList {
-  list-style: outside;
-} */
-
 .homePageContainer {
   width: 290px;
   margin-left: auto;
@@ -13,15 +9,15 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: 32px;
+  font-size: 28px;
   color: rgb(12, 88, 99);
   margin-bottom: 24px;
   text-shadow: 1px 1px 2px rgb(121, 188, 192), 2px 2px 5px rgb(195, 224, 220);
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 768px) {
   .homePageContainer {
-    width: 1440px;
+    width: 738px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -29,14 +25,18 @@
   .homePageTitle {
     font-size: 36px;
     margin-top: 24px;
-    padding-left: 56px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .homePageContainer {
+    width: 1410px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  /* .homePageLink {
-    color: black;
+  .homePageTitle {
+    font-size: 36px;
+    margin-top: 24px;
   }
-  .homePageLink:hover,
-  .homePageLink:focus {
-    color: rgb(22, 166, 128);
-  } */
 }
